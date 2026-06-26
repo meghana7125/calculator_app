@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator">
+
+    <!-- Theme Button -->
+    <button class="theme-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+
+    <!-- Display -->
+    <input type="text" id="display" readonly>
+
+    <!-- Basic Calculator -->
+    <div class="buttons">
+        <button class="clear" onclick="clearDisplay()">C</button>
+        <button onclick="deleteLast()">DEL</button>
+        <button onclick="appendValue('%')">%</button>
+        <button class="operator" onclick="appendValue('/')">÷</button>
+
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button class="operator" onclick="appendValue('*')">×</button>
+
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button class="operator" onclick="appendValue('-')">−</button>
+
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button class="operator" onclick="appendValue('+')">+</button>
+
+        <button onclick="appendValue('0')">0</button>
+        <button onclick="appendValue('.')">.</button>
+        <button class="equal" onclick="calculate()">=</button>
+    </div>
+
+    <!-- Scientific Buttons -->
+    <div class="scientific">
+        <button onclick="square()">x²</button>
+        <button onclick="sqrt()">√</button>
+        <button onclick="sin()">sin</button>
+        <button onclick="cos()">cos</button>
+        <button onclick="tan()">tan</button>
+        <button onclick="log()">log</button>
+    </div>
+
+    <!-- History -->
+   <div class="history-buttons">
+    <button onclick="clearHistory()">🗑️ Clear History</button>
+    <button onclick="copyResult()">📋 Copy Result</button>
+</div>
+
+<div id="history"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
